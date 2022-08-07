@@ -2,6 +2,7 @@ import { HardhatUserConfig } from "hardhat/config"
 import dotenv from "dotenv"
 import "@nomicfoundation/hardhat-toolbox"
 import "@nomiclabs/hardhat-etherscan"
+import "./tasks/block-number"
 
 dotenv.config()
 
