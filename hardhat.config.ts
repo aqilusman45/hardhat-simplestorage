@@ -4,6 +4,7 @@ import "@nomicfoundation/hardhat-toolbox"
 import "@nomiclabs/hardhat-etherscan"
 import "./tasks/block-number"
 import "hardhat-gas-reporter"
+import "solidity-coverage"
 
 dotenv.config()
 
