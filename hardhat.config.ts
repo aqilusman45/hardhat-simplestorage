@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import "@nomicfoundation/hardhat-toolbox"
 import "@nomiclabs/hardhat-etherscan"
 import "./tasks/block-number"
+import "hardhat-gas-reporter"
 
 dotenv.config()
 
@@ -10,6 +11,7 @@ export const {
   GANACHE_RPC_URL,
   GANACH_ACCOUNT_PRIVATE_KEY = "",
   ETHERSCAN_API_KEY,
+  COINMARKETCAP_API_KEY,
 } = process.env
 
 const config: HardhatUserConfig = {
@@ -25,6 +27,14 @@ const config: HardhatUserConfig = {
       chainId: 1337,
     },
   },
+  gasReporter: {
+    enabled: true,
+    noColors: true,
+    outputFile: 'gas-report.txt',
+    currency: 'USD',
+    coinmarketcap: COINMARKETCAP_API_KEY,
+    token: 'Matic'
+  }
 }
 
 export default config
