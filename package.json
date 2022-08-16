@@ -2,7 +2,10 @@
   "name": "hardhat-simplestorage",
   "version": "1.0.0",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "test": "yarn hardhat test",
+    "coverage": "yarn hardhat coverage"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
